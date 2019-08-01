@@ -1,0 +1,70 @@
+﻿* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+#gameZone{
+    position:absolute;
+    z-index: 1
+}
+
+#loginScreen{
+    position:fixed;
+    z-index:99;
+    background-color:rgba(200,200,200,.5);
+    width:100vw;
+    height:100vh;
+}
+
+#loginButtons{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align:center;
+  font-size: large;
+  color:#00ff00;
+  background-color: rgba(200,200,200,1);
+}
+
+#login{
+    width:200px;
+    height:50px;
+}
+
+#sendLogin {
+    width: 200px;
+    height: 50px;
+    border:2px solid #00ff00;
+}
+
+#hud{
+    position:absolute;
+    z-index:5;
+    bottom:0px;
+    left:0px;
+    height:200px;
+    width:100%;
+    background-color: #004400;
+    opacity:0.8;
+}
+
+#sheepScreen{
+  position:absolute;
+  z-index:7;
+  right:400px;
+  top:0px;
+  height:200px;
+  width:381px;
+  background-image: url('../img/old_tv.png');
+}
+
+#canvas{
+  position:absolute;
+  top:30px;
+  left:32px;
+  z-index:6;
+  opacity:1;
+}

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>projekt</title>
+    <meta charset="UTF-8"/>
+    <link href="styles/global.css" rel="stylesheet" type="text/css"/>
+    <script src="libs/socket.io-1.4.5.js"></script>
+    <script src="libs/jquery-1.12.2.js"></script>
+    <script src="libs/three.js"></script>
+    <script src="styles/Materials.js"></script>
+    <script src="Animations.js"></script>
+    <script src="AnimationsController.js"></script>
+    <script src="ColladaLoader.js"></script>
+    <script src="Net.js"></script>
+    <script src="Ui.js"></script>
+    <script src="Game.js"></script>
+    <script>
+
+	//inicjalizacja poszczególnych klas
+
+        var game;
+        var net;
+        var ui;
+        var animations;
+        var ac;
+        window.addEventListener("load", function () {
+            game = new Game()
+            net = new Net();
+            ui = new Ui();
+            animations = new Animations();
+            ac = new AnimationsController();
+        })
+
+
+    </script>
+
+</head>
+<body>
+
+    <div id="loginScreen">
+        <div id="loginButtons">
+            <input type="text" id="login"/>
+            <input type="button" id="sendLogin" value="Login"/>
+        </div>
+    </div>
+    <div id="gameZone"></div>
+    <div id="hud">
+        <div id="d0" class="pDirection">left</div>
+        <div id="d1" class="pDirection">up</div>
+        <div id="d2" class="pDirection">right</div>
+        <div id="d3" class="pDirection">down</div>
+        <div id="hint">Hint: <span id="hintText"></span></div>
+        <div id="sheepScreen"/><canvas id='canvas' width='178' height='144'></canvas></div>
+    </div>
+
+</body>
+</html>
